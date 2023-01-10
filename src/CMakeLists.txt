@@ -82,7 +82,7 @@ target_include_directories(${LIBRARY_NAME} PUBLIC
 install(TARGETS ${LIBRARY_NAME} DESTINATION lib EXPORT ${LIBRARY_NAME}-targets)
 install(FILES ${PROJECT_SOURCE_DIR}/src/interface/pnp_solver.h DESTINATION include)
 
-install(EXPORT ${LIBRARY_NAME}-targets DESTINATION lib/cmake NAMESPACE PnpSolver::)
+install(EXPORT ${LIBRARY_NAME}-targets DESTINATION lib/cmake/${LIBRARY_NAME} NAMESPACE PnpSolver::)
 
 include(CMakePackageConfigHelpers)
 configure_package_config_file(${CMAKE_CURRENT_SOURCE_DIR}/../cmake/PnpSolverConfig.cmake.in
