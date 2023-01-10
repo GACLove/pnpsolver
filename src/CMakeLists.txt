@@ -87,11 +87,11 @@ install(EXPORT ${LIBRARY_NAME}-targets DESTINATION lib/cmake NAMESPACE PnpSolver
 include(CMakePackageConfigHelpers)
 configure_package_config_file(${CMAKE_CURRENT_SOURCE_DIR}/../cmake/PnpSolverConfig.cmake.in
     "${CMAKE_CURRENT_BINARY_DIR}/PnpSolverConfig.cmake"
-    INSTALL_DESTINATION lib/cmake/
+    INSTALL_DESTINATION lib/cmake/${LIBRARY_NAME}
     NO_CHECK_REQUIRED_COMPONENTS_MACRO
 )
 
 install(FILES
     "${CMAKE_CURRENT_BINARY_DIR}/PnpSolverConfig.cmake"
-    DESTINATION lib/cmake
+    DESTINATION lib/cmake/${LIBRARY_NAME}
 )
